@@ -57,7 +57,7 @@ module.exports = (Collection) => {
   // ======
   const update = (req, res) => {
     const changedEntry = req.body;
-    Collection.update({ _id: req.params._id }, { $set: changedEntry }, (e) => {
+    Collection.updateOne({ _id: req.params._id }, { $set: changedEntry }, (e) => {
       if (e)
         res.sendStatus(500);
       else

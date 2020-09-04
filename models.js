@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 // Database Config
 // ===============
 const Schema = mongoose.Schema;
-mongoose.connect('mongodb://justfortuts:a1b2c3d4@ds155461.mlab.com:55461/justfortuts', {useNewUrlParser: true});
+// mongoose.connect('mongodb://justfortuts:a1b2c3d4@ds155461.mlab.com:55461/justfortuts', {useNewUrlParser: true});
+mongoose.connect('mongodb://127.0.0.1:27017/joker', {useNewUrlParser: true});
 
 // =======
 // Schemas

@@ -15,5 +15,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api/jokes', require('./crud')(models.Jokes));
 
+//New Code added for other R&D
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
+  })
+
+  app.post('/quotes', (req, res) => {
+    console.log('Hellooooooooooooooooo!')
+  }) 
 // Server
 app.listen(port, () => console.log(`Listening on port ${port}`));
